@@ -1,10 +1,9 @@
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Hellomsg from './helloWorld';
 import registerServiceWorker from './registerServiceWorker';
-import ControlPanel from './view/ControlPanel';
-// import App from './App';
-// import CountClick from './CountClick';
-ReactDOM.render(<ControlPanel />, document.getElementById('root'));
+import ControlPanel from './view/ControlPanel.js';
+ReactDOM.render(
+  <ControlPanel />,
+  document.getElementById('root'));
 registerServiceWorker();
