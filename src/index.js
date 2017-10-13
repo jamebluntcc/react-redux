@@ -1,10 +1,13 @@
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Hellomsg from './helloWorld';
+import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
-import ControlPanel from './view/ControlPanel';
-// import App from './App';
-// import CountClick from './CountClick';
-ReactDOM.render(<ControlPanel />, document.getElementById('root'));
+import ControlPanel from './view/ControlPanel.js';
+import store from './Store.js';
+ReactDOM.render(
+  <Provider store={store}>
+    <ControlPanel />
+  </Provider>,
+  document.getElementById('root'));
 registerServiceWorker();
